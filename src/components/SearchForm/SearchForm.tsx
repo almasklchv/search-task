@@ -1,9 +1,8 @@
-import { useContext } from "react";
+import { useSearchContext } from "../../hooks/use-search-context";
 import "./styles.css";
-import { SearchContext } from "../SearchResults/SearchContext";
 
 export const SearchForm = (): React.ReactElement => {
-  const { searchQuery, setSearchQuery } = useContext(SearchContext);
+  const { searchQuery, setSearchQuery } = useSearchContext();
 
   return (
     <div className="searchForm">

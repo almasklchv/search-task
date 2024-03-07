@@ -1,6 +1,6 @@
 import { memo } from "react";
-import "./style.css";
 import { User } from "./user.interface";
+import "./style.css";
 
 export const UserCard = memo((props: User): React.ReactElement => {
   return (

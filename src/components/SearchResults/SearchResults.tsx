@@ -1,11 +1,9 @@
-import { useContext } from "react";
-import { SearchContext } from "./SearchContext";
 import { UserCard } from "../UserCard/UserCard";
-
+import { useSearchContext } from "../../hooks/use-search-context";
 import "./style.css";
 
 export const SearchResults = (): React.ReactElement => {
-  const { users } = useContext(SearchContext);
+  const { users } = useSearchContext();
 
   return (
     <div className="usersList">
