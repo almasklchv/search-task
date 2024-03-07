@@ -1,6 +1,8 @@
+import { memo } from "react";
 import "./style.css";
+import { User } from "./user.interface";
 
-export function UserCard(props) {
+export const UserCard = memo((props: User): React.ReactElement => {
   return (
     <div className="userCard">
       <img className="userPic" src={props.image} />
@@ -10,4 +12,4 @@ export function UserCard(props) {
       </div>
     </div>
   );
-}
+});

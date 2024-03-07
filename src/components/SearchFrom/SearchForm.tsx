@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext } from "react";
 import "./styles.css";
+import { SearchContext } from "../SearchResults/SearchContext";
 
-export function SearchForm() {
-  const [searchQuery, setSearchQuery] = useState<string>("");
+export const SearchForm = (): React.ReactElement => {
+  const { searchQuery, setSearchQuery } = useContext(SearchContext);
 
   return (
     <div className="searchForm">
@@ -15,4 +16,4 @@ export function SearchForm() {
       </form>
     </div>
   );
-}
+};
